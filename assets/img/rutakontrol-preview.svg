@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0b0f19" />
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="360" rx="16" fill="url(#rkBg)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5"/>
+
+  <!-- Top bar -->
+  <rect width="600" height="42" rx="16" fill="#1e293b" fill-opacity="0.6"/>
+  <rect y="26" width="600" height="16" fill="#1e293b" fill-opacity="0.6"/>
+  <line x1="0" y1="42" x2="600" y2="42" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+  
+  <!-- Window buttons -->
+  <circle cx="28" cy="21" r="5" fill="#ef4444" opacity="0.7"/>
+  <circle cx="44" cy="21" r="5" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="60" cy="21" r="5" fill="#10b981" opacity="0.7"/>
+  
+  <text x="300" y="26" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" text-anchor="middle" letter-spacing="1">RUTAKONTROL &bull; ESQUEMA DE LIQUIDACIÓN DE TRANSPORTE</text>
+
+  <!-- Left: Route / Map Network Topology -->
+  <g transform="translate(30, 65)">
+    <rect width="250" height="260" rx="12" fill="#161f30" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1"/>
+    
+    <text x="20" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#38bdf8">Topología de Rutas &amp; Carga</text>
+    <text x="20" y="48" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Trazado y verificación de origen / destino</text>
+
+    <!-- Grid lines -->
+    <path d="M 20 80 L 230 80 M 20 130 L 230 130 M 20 180 L 230 180 M 20 230 L 230 230" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    <path d="M 60 60 L 60 240 M 120 60 L 120 240 M 180 60 L 180 240" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+    <!-- Route Line connecting nodes -->
+    <path d="M 45 190 Q 90 90 140 140 T 215 100" fill="none" stroke="url(#accentBlue)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Node A: Origen -->
+    <g transform="translate(45, 190)">
+      <circle r="12" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+      <circle r="5" fill="#38bdf8"/>
+      <text y="22" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Origen</text>
+    </g>
+
+    <!-- Node B: Intermedio -->
+    <g transform="translate(140, 140)">
+      <circle r="10" fill="#0f172a" stroke="#a855f7" stroke-width="2"/>
+      <circle r="4" fill="#a855f7"/>
+      <text y="20" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Punto Vía</text>
+    </g>
+
+    <!-- Node C: Destino -->
+    <g transform="translate(215, 100)">
+      <circle r="12" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+      <circle r="5" fill="#10b981"/>
+      <text y="22" font-family="system-ui, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Destino</text>
+    </g>
+
+    <!-- Tag at bottom -->
+    <rect x="20" y="215" width="210" height="26" rx="6" fill="#0f172a" stroke="rgba(255,255,255,0.06)"/>
+    <text x="125" y="232" font-family="system-ui, sans-serif" font-size="10" fill="#38bdf8" text-anchor="middle">Módulo: Cálculo de Distancias &amp; Tramos</text>
+  </g>
+
+  <!-- Right: Settlement / Liquidation Calculation Matrix -->
+  <g transform="translate(305, 65)">
+    <!-- Summary metrics card -->
+    <rect width="265" height="120" rx="12" fill="#161f30" stroke="rgba(168, 85, 247, 0.2)" stroke-width="1"/>
+    
+    <text x="18" y="28" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#a855f7">Métricas de Liquidación</text>
+    
+    <!-- Mini KPI 1 -->
+    <rect x="18" y="42" width="108" height="62" rx="8" fill="#0f172a" stroke="rgba(255, 255, 255, 0.05)"/>
+    <text x="28" y="60" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Variables de Carga</text>
+    <text x="28" y="80" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Flete &amp; Ton</text>
+    <text x="28" y="94" font-family="system-ui, sans-serif" font-size="9" fill="#10b981">Control Tarifario</text>
+
+    <!-- Mini KPI 2 -->
+    <rect x="138" y="42" width="108" height="62" rx="8" fill="#0f172a" stroke="rgba(255, 255, 255, 0.05)"/>
+    <text x="148" y="60" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Cálculo Liquidación</text>
+    <text x="148" y="80" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Algoritmo</text>
+    <text x="148" y="94" font-family="system-ui, sans-serif" font-size="9" fill="#38bdf8">Auditable</text>
+
+    <!-- Secondary table view card -->
+    <g transform="translate(0, 134)">
+      <rect width="265" height="126" rx="12" fill="#161f30" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+      <text x="18" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Estructura de Datos del Despacho</text>
+
+      <line x1="18" y1="35" x2="247" y2="35" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+      <!-- Table headers -->
+      <text x="22" y="50" font-family="monospace" font-size="9" fill="#64748b">PARAM</text>
+      <text x="120" y="50" font-family="monospace" font-size="9" fill="#64748b">TIPO</text>
+      <text x="210" y="50" font-family="monospace" font-size="9" fill="#64748b">ESTADO</text>
+
+      <!-- Row 1 -->
+      <text x="22" y="68" font-family="monospace" font-size="10" fill="#38bdf8">id_despacho</text>
+      <text x="120" y="68" font-family="monospace" font-size="10" fill="#94a3b8">INT (PK)</text>
+      <text x="210" y="68" font-family="monospace" font-size="10" fill="#10b981">OK</text>
+
+      <!-- Row 2 -->
+      <text x="22" y="86" font-family="monospace" font-size="10" fill="#38bdf8">peso_carga_kg</text>
+      <text x="120" y="86" font-family="monospace" font-size="10" fill="#94a3b8">DECIMAL</text>
+      <text x="210" y="86" font-family="monospace" font-size="10" fill="#10b981">VALID</text>
+
+      <!-- Row 3 -->
+      <text x="22" y="104" font-family="monospace" font-size="10" fill="#38bdf8">total_liquidacion</text>
+      <text x="120" y="104" font-family="monospace" font-size="10" fill="#94a3b8">COMPUTED</text>
+      <text x="210" y="104" font-family="monospace" font-size="10" fill="#38bdf8">CALC</text>
+    </g>
+  </g>
+</svg>

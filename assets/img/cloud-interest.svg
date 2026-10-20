@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#162033" />
+      <stop offset="100%" stop-color="#0b1120" />
+    </linearGradient>
+    <filter id="cloudGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Box -->
+  <rect width="600" height="340" rx="16" fill="url(#panelBg)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5" />
+
+  <!-- Ambient Grid Patterns -->
+  <g stroke="rgba(255, 255, 255, 0.04)" stroke-width="1">
+    <line x1="50" y1="40" x2="50" y2="300" />
+    <line x1="150" y1="40" x2="150" y2="300" />
+    <line x1="250" y1="40" x2="250" y2="300" />
+    <line x1="350" y1="40" x2="350" y2="300" />
+    <line x1="450" y1="40" x2="450" y2="300" />
+    <line x1="550" y1="40" x2="550" y2="300" />
+    <line x1="40" y1="80" x2="560" y2="80" />
+    <line x1="40" y1="170" x2="560" y2="170" />
+    <line x1="40" y1="260" x2="560" y2="260" />
+  </g>
+
+  <!-- Central Cloud Motif -->
+  <g transform="translate(300, 150)" filter="url(#cloudGlow)">
+    <!-- Connection rays -->
+    <line x1="-160" y1="-50" x2="-60" y2="-10" stroke="rgba(56, 189, 248, 0.4)" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="160" y1="-50" x2="60" y2="-10" stroke="rgba(168, 85, 247, 0.4)" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="-120" y1="80" x2="-40" y2="30" stroke="rgba(56, 189, 248, 0.4)" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="120" y1="80" x2="40" y2="30" stroke="rgba(168, 85, 247, 0.4)" stroke-width="2" stroke-dasharray="4 4"/>
+
+    <!-- Cloud Icon Shape -->
+    <path d="M -45 15 
+             C -65 15 -75 0 -60 -15 
+             C -65 -35 -40 -45 -25 -35 
+             C -15 -55 25 -55 35 -35 
+             C 50 -45 75 -35 70 -15 
+             C 85 0 75 15 55 15 
+             Z" 
+          fill="url(#cloudGrad)" opacity="0.9" />
+
+    <text y="-5" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">CLOUD</text>
+  </g>
+
+  <!-- Pillar 1: Despliegue & Escalabilidad -->
+  <g transform="translate(60, 60)">
+    <rect width="160" height="74" rx="10" fill="#0f172a" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5" />
+    <circle cx="24" cy="24" r="8" fill="#38bdf8" />
+    <path d="M 21 24 L 27 24 M 24 21 L 24 27" stroke="#0f172a" stroke-width="2" stroke-linecap="round" />
+    <text x="40" y="28" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Escalabilidad</text>
+    <text x="24" y="52" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Crecimiento dinámico y</text>
+    <text x="24" y="64" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">gestión eficiente de recursos</text>
+  </g>
+
+  <!-- Pillar 2: Disponibilidad Global -->
+  <g transform="translate(380, 60)">
+    <rect width="160" height="74" rx="10" fill="#0f172a" stroke="rgba(168, 85, 247, 0.3)" stroke-width="1.5" />
+    <circle cx="24" cy="24" r="8" fill="#a855f7" />
+    <circle cx="24" cy="24" r="3" fill="#0f172a" />
+    <text x="40" y="28" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Alta Disponibilidad</text>
+    <text x="24" y="52" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Resiliencia y continuidad</text>
+    <text x="24" y="64" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">para soluciones de software</text>
+  </g>
+
+  <!-- Pillar 3: Infraestructura como Código -->
+  <g transform="translate(60, 205)">
+    <rect width="160" height="74" rx="10" fill="#0f172a" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5" />
+    <circle cx="24" cy="24" r="8" fill="#38bdf8" />
+    <text x="24" y="27" font-family="monospace" font-size="10" fill="#0f172a" font-weight="bold" text-anchor="middle">&lt;/&gt;</text>
+    <text x="40" y="28" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Infraestructura</text>
+    <text x="24" y="52" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Aprovisionamiento ágil de</text>
+    <text x="24" y="64" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">servidores y almacenamiento</text>
+  </g>
+
+  <!-- Pillar 4: Despliegue de Aplicaciones -->
+  <g transform="translate(380, 205)">
+    <rect width="160" height="74" rx="10" fill="#0f172a" stroke="rgba(168, 85, 247, 0.3)" stroke-width="1.5" />
+    <circle cx="24" cy="24" r="8" fill="#a855f7" />
+    <path d="M 24 19 L 24 29 M 20 23 L 24 19 L 28 23" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <text x="40" y="28" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Despliegue Continuo</text>
+    <text x="24" y="52" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Publicación confiable de</text>
+    <text x="24" y="64" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">aplicaciones en producción</text>
+  </g>
+</svg>
