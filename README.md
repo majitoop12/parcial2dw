@@ -143,12 +143,12 @@ A continuación se detalla el estado verificado de cada criterio exigido en la a
   *(Probado en anchos de 320px, 375px–430px, 768px, 1024px y 1440px sin desbordamiento horizontal).*
 - [x] **Se revisaron accesibilidad y navegación.**  
   *(Etiquetas semánticas, contraste AA/AAA, enlace de salto al contenido `#main-content`, botón accesible con `aria-*`, soporte de teclado y `prefers-reduced-motion`).*
-- [x] **El código se preparó para el repositorio correcto.**  
-  *(Estructura limpia, Git local inicializado con rama `main` y confirmación lista para vincular a `https://github.com/majitoop12/parcial2dw.git`).*
-- [x] **GitHub Pages está listo para configurarse.**  
-  *(Archivos ubicados en la raíz con rutas relativas para despliegue directo desde rama `main`).*
-- [x] **Se preparó la comprobación de la URL pública del sitio.**  
-  *(URL de despliegue definida: `https://majitoop12.github.io/parcial2dw/`).*
+- [x] **El código se subió al repositorio correcto.**  
+  *(Código publicado en [https://github.com/majitoop12/parcial2dw](https://github.com/majitoop12/parcial2dw) en la rama principal `main`).*
+- [x] **GitHub Pages está configurado.**  
+  *(Configurado y activo desde la rama `main` y carpeta `/ (root)`).*
+- [x] **Se comprobó la URL pública del sitio.**  
+  *(Verificado y disponible en vivo con estado 200 OK en: `https://majitoop12.github.io/parcial2dw/`).*
 
 ---
 
@@ -156,7 +156,6 @@ A continuación se detalla el estado verificado de cada criterio exigido en la a
 
 1. **Revisión del buzón de correo:** Comprobar la recepción de pruebas enviadas a `mzapata0@unilasallista.edu.co` para validar que el alias institucional esté activo.
 2. **Repositorio de RutaKontrol:** Cuando el código del proyecto cuente con repositorio público propio en GitHub, actualizar el botón del proyecto en `index.html` (reemplazando el enlace general por la URL exacta del repositorio).
-3. **Credenciales y publicación remota:** Ejecutar el `git push` con sus credenciales de GitHub para conectar el remoto definitivo.
 
 ---
 
